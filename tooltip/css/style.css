@@ -1,0 +1,32 @@
+*{
+	margin: 0;
+	padding:0;
+	font-size: 12px;
+	font-family: sans-serif;
+}
+[tooltip]:before {
+    content: attr(tooltip);
+    position: absolute;
+    opacity: 0;
+    transition: all 0.15s ease;
+    padding: 5px;
+    color: #333;    
+    box-shadow: 2px 2px 5px #ccc;    
+    color: #ccc;
+}
+
+[tooltip]:hover:before {
+    opacity: 1;
+    background: #191919;
+    margin-top: -20px;
+    margin-left: 20px;   
+}
+
+[tooltip]:not([tooltip-persistent]):before {
+    pointer-events: none;
+}
+div {
+    background: #ccc;
+    padding: 5px;
+    margin: 30px;
+}
